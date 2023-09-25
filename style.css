@@ -18,27 +18,22 @@ h1 {
     font-style: italic;
     color: aqua;
 }
-#start-btn{
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border-color: black;
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 10px;
+   
 
-    /* color: #016f32;
-    width: 150px;
-    background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: bold;
-    border: none;
-    border-radius: 2px; */
-
-}
-#start-btn:hover{
+button {
+        color: #016f32;
+        width: 150px;
+        background: goldenrod;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        border: none;
+        border-radius: 2px;
+        margin-bottom: 4px;
+    }
+button:hover{
     background-color: rgb(212, 37, 46);
     color: greenyellow;
 }
+
 

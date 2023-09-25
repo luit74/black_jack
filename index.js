@@ -7,9 +7,13 @@ let message = ""
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
+let newCardEl = document.getElementById("newCard-el");
 
+function startBtn(){
+    renderGame();
+}
 
-function start(){
+function renderGame(){
     cardsEl.textContent = "Cards: " + firstCard + " & " + secondCard;
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
@@ -22,6 +26,14 @@ function start(){
         isAlive = false
     }
     messageEl.textContent = message
+}
+
+function newCardBtn(){
+    console.log("Drawing a new card from the deck");
+    let card = 8;
+    sum += card;
+    newCardEl.textContent = "Your new card is: " + card;
+    renderGame();
 }
 
 
