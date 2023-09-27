@@ -1,5 +1,5 @@
-let firstCard = 10
-let secondCard = 4
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -14,9 +14,16 @@ function startBtn(){
     renderGame();
 }
 
+function getRandomCard(){
+    return Math.floor(Math.random()* 10)+1
+}
+
 function renderGame(){
     // cardsEl.textContent = "Cards: " + firstCard + " & " + secondCard; -- previuous line , now converting it into an array;
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+    cardsEl.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++){
+        cardsEl.textContent += cards[i] + "  "
+    }
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card? "
@@ -32,7 +39,7 @@ function renderGame(){
 
 function newCardBtn(){
     console.log("Drawing a new card from the deck");
-    let card = 8;
+    let card = getRandomCard()
     sum += card;
     newCardEl.textContent = "Your new card is: " + card;
     cards.push(card);
